@@ -1,0 +1,61 @@
+.Title {
+        border: 15px solid #142E54;
+        padding: 25px ;
+        margin: 100px;
+        background-color: #EAE6DF;    
+        text-align: center;
+        font-size: 40px;
+    }
+
+    img {
+        display: inline-block;
+        border: 6px solid #142E54;
+        margin-left: 25px;
+        border-radius: 8px;
+        box-shadow: 8px 4px 8px rgba(255, 9, 9, 0.2);
+        width: 200px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .disclaimer {
+        font-size: 20px;
+        color: red;
+        text-align: center;
+        margin: 20px;
+    }
+
+    ol {
+        list-style-type: none;
+        padding: 20;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #142E54;
+        font-weight: bold;
+    }
+
+     #carousel {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 20px auto;
+    overflow: visible;
+    
+  }
+  #carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+  button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    margin-left: 75px;
+    font-size: 16px;
+  }

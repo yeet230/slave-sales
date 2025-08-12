@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src = "script.js"></script>
+<script src = "Button Clicks.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +8,10 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
 
     <title>Illegal Minion Market</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="Images/icon.png" type="image/x-icon">
     <style>
-    .Title {
-        border: 15px solid #142E54;
-        padding: 25px ;
-        margin: 100px;
-        background-color: #EAE6DF;    
-        text-align: center;
-        font-size: 40px;
-    }
-
-    .disclaimer {
-        font-size: 20px;
-        color: red;
-        text-align: center;
-        margin: 20px;
-    }
-
-    ol {
-        list-style-type: none;
-        padding: 20;
-    }
-    img {
-        display: inline-block;
-        margin: 10px 15px;
-        border: 6px solid #142E54;
-        border-radius: 8px;
-        box-shadow: 8px 4px 8px rgba(255, 9, 9, 0.2);
-        width: 200px;
-        height: 200px;
-    }
-    a {
-        text-decoration: none;
-        color: #142E54;
-        font-weight: bold;
-    }
+      
 
     </style>
 
@@ -51,7 +20,7 @@
     <h1> Minions For Sale</h1>
     </div>
     <ol>
-        <li>Slave 1: Freaky Child</li>
+        <li>Minion 1: Freaky Child</li>
         <ul>
             <li>Price Range: $1,000 - 1,500</li>
             <li>Age: 18 </li>
@@ -60,34 +29,35 @@
         
         <button onclick="popup('Sorry but no')"> Buy </button>
         
-        <li>Slave 2: High MF</li>
+        <li>Minion 2: High MF</li>
         <ul>
             <li>Price Range: $1,500 - 2,000</li>
             <li>Age: 24</li>
         </ul>
         <img src = "Images/High MF.png" alt="High MF">
 
-        <li>Slave 3: Crazy MF</li>
+        <li>Minion 3: Crazy MF</li>
         <ul>
             <li>Price: Free</li>
             <li>Age: 19</li>
         </ul>
         <img src = "Images/Crazy MF.JPG" alt="Crazy MF">
 
-        <li>
-            <ul>
-                
-                
-            </ul>
-            
-        </li>
+        <li>Minion 4: Crazy MF</li>
+        <ul>
+            <li>Price: $2,000</li>
+            <li>Age: 21</li>
+        </ul>
+        <img src = "Images/meh.JPG" alt="Crazy MF">
     </ol>
-
+    
     <h1>Special thanks to our supplier</h1>
-    <!-- <img  src = "Images/Evil Seller.JPG" alt = "Evil Seller"  > -->
+   
+    <img src = "Images/Gru.JPG" alt="Minion Supplier">
+
     
    
-        <p>Note: All slaves are sold as is, with no warranties or guarantees. Prices are negotiable.</p>
+        <p>Note: All Minions are sold as is, with no warranties or guarantees. Prices are negotiable.</p>
         <p>Contact us for more information or to arrange a viewing.</p>
         <p>Email: <a href="mailto:john.has.a.email.now@gmail.com"> john.has.a.email.now@gmail.com</a></p>
 
@@ -97,5 +67,51 @@
             The images and descriptions are purely fictional and should not be taken seriously.
         </p>
     </div>
+
+
+<div id="carousel">
+  <img id="carousel-image" src="" alt="Carousel Image" />
+</div>
+
+<div id="controls">
+  <button id="prev">◀ Prev</button>
+  <button id="next">Next ▶</button>
+</div>
+
+<script>
+  // Put your image URLs here
+  const images = [
+    "Images/FreakyChild.jpg",
+    "Images/High MF.png",
+    "Images/Crazy MF.JPG",
+    "Images/meh.JPG"
+  ];
+
+  let currentIndex = 0;
+  const imgElement = document.getElementById("carousel-image");
+
+  // Function to update the image
+  function showImage(index) 
+  {
+    imgElement.src = images[index];
+  }
+
+  // Show initial image
+  showImage(currentIndex);
+
+  // Button event listeners
+  document.getElementById("prev").onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  };
+//code for image carousel specificly the next button
+ document.getElementById("next").onclick = () =>
+{
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+};
+ 
+</script>
+
 </body>
 </html>
